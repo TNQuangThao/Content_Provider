@@ -5,20 +5,15 @@
     android:orientation="vertical"
     android:padding="8dp">
     <TextView
-        android:id="@+id/smsDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date" />
-    <TextView
-        android:id="@+id/smsName"
+        android:id="@+id/contactName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="Name" />
     <TextView
-        android:id="@+id/smsBody"
+        android:id="@+id/contactNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Body" />
+        android:text="Number" />
 
 </LinearLayout>

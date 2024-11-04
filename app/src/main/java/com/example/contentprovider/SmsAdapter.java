@@ -20,17 +20,21 @@ public class SmsAdapter extends RecyclerView.Adapter<SmsAdapter.SmsViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull SmsViewHolder holder, int position) {
         SmsModel sms = smsList.get(position);
-        holder.addressTextView.setText(sms.getAddress());
-        holder.bodyTextView.setText(sms.getBody());
+        holder.smsDate.setText(sms.getDate().toString());
+        holder.smsName.setText(sms.getName());
+        holder.smsBody.setText(sms.getBody());
     }
     @Override
-    public int getItemCount() {return smsList.size();}
-    public static class SmsViewHolder extends RecyclerView.ViewHolder {
-        TextView addressTextView, bodyTextView;
-        public SmsViewHolder(@NonNull View itemView) {
+    public int getItemCount() {
+        return smsList.size();
+    }
+    static class SmsViewHolder extends RecyclerView.ViewHolder {
+        TextView smsDate,smsName,smsBody;
+        SmsViewHolder(@NonNull View itemView) {
             super(itemView);
-            addressTextView = itemView.findViewById(R.id.textViewAddress);
-            bodyTextView = itemView.findViewById(R.id.textViewBody);
+            smsDate = itemView.findViewById(R.id.smsDate);
+            smsName = itemView.findViewById(R.id.smsName);
+            smsBody = itemView.findViewById(R.id.smsBody);
         }
     }
 }

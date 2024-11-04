@@ -17,19 +17,25 @@
         android:layout_height="wrap_content"
         android:text="22115053122341"
         android:textAlignment="center"/>
-    <TextView
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Đọc tin nhắn"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:padding="10dp"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleview"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem_sms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem_call_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
+        android:layout_height="match_parent"/>
 </LinearLayout>
